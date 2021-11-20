@@ -172,23 +172,3 @@ class HeavyMetal: Singer {
         print("AAAhhhhhhhhh")
     }
 }
-
-//didSet
-struct Personas {
-    var clothes: String {
-        willSet {
-            updateUI(msg: "I'm changing from \(clothes) to \(newValue)")
-        }
-
-        didSet {
-            updateUI(msg: "I just changed from \(oldValue) to \(clothes)")
-        }
-    }
-}
-
-func updateUI(msg: String) {
-    print(msg)
-}
-
-var taylors = Personas(clothes: "T-shirts")
-taylors.clothes = "short skirts"
